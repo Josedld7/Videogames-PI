@@ -1,0 +1,106 @@
+.container {
+
+  background-image: linear-gradient(
+    to right,
+    hsla(0, 0%, 0%, 0.916),
+    hsla(120, 82%, 33%, 0.185)
+  ),
+  url("../../assets/image-header.webp");
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+.container_elements{
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 180px;
+ 
+}
+
+.text_logo {
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+.text_logo2 {
+  display: none;
+}
+
+
+.container_btns {
+  display: flex;
+}
+
+
+
+.container_btn_crear {
+  padding-right: 15px;
+}
+
+.btns {
+  background: var(--btn-bg);
+  border: none;
+  color: #fff;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btns:hover {
+  box-shadow: 0px 2px 8px white;
+}
+
+
+@media (max-width: 730px) {
+  .container_elements{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .text_logo {
+    display: none;
+  }
+
+  .text_logo2{
+    display: contents;
+   color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+}
+
+@media (max-width: 460px) {
+ 
+
+  .container_elements{
+   display: flex;
+   flex-direction: column;
+   height: 150px;
+   padding-bottom: 20px;
+  }
+
+  .text_logo2{
+ font-size: 2rem;
+ padding-bottom: 5px;
+  }
+
+}
+
+@media (max-width: 280px) {
+ 
+  .text_logo2{
+ font-size: 1.5rem;
+
+  }
+
+}
+

@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container_header{
+    position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.container_main{
+    background-color: var(--bg-main);
+}
+
+.container_footer{
+    margin-top: auto;
+}

@@ -1,0 +1,56 @@
+.input {
+  width: 500px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  height: 30px;
+  background: #d6dbdf;
+  outline: none;
+  padding-left: 20px;
+}
+
+.input::placeholder {
+  color: gray;
+  font-weight: 400;
+}
+
+.btn {
+  background: var(--btn-bg);
+  border: none;
+  height: 30px;
+  border-radius: 0 5px 5px 0px;
+  width: 30px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media (max-width: 1089px) {
+  .input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 830px) {
+  .input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 730px) {
+  .input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 460px) {
+  .input {
+    width: 230px;
+  }
+}
+
+@media (max-width: 280px) {
+  .input {
+    width: 150px;
+  }
+}
