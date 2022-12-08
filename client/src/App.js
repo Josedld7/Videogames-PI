@@ -13,14 +13,15 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Landing} />
-
           <Route path="/home" component={Home} />
+
 
           <Route path="/create" component={Form} />
 
           <Route path="/buscar/:id" component={Detail} />
 
           <Route path="*" component={PageNofound} />
+
         </Switch>
       </BrowserRouter>
     </div>

@@ -28,8 +28,7 @@ const HeaderGames = ({ recargarPage }) => {
 
           <div>
             <button className={style.btns} onClick={recargarPage}>
-              {" "}
-              Recargar{" "}
+              Recargar
             </button>
           </div>
         </div>

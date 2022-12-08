@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import style from "./Cards.module.css";
 
 const Cards = ({ gamePagination }) => {
@@ -24,9 +24,9 @@ const Cards = ({ gamePagination }) => {
 
                   {/* nombre */}
                   <div className={style.container_title}>
-                    <NavLink to={`/buscar/${item.id}`} className={style.link}>
+                    <Link  to={`/buscar/${item.id}`} className={style.link}>
                       <h3 className={style.title}>{item.nombre}</h3>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -50,11 +50,11 @@ const Cards = ({ gamePagination }) => {
                     <p className={style.rating}> {item.rating} </p>
                   </div>
                 </div>
-                <NavLink to={`/buscar/${item.id}`} className={style.link}>
+                <Link to={`/buscar/${item.id}`} className={style.link}>
                   <div className={style.container_btn}>
                     <button className={style.btn}>Ver mas</button>
                   </div>
-                </NavLink>
+                </Link>
               </div>
             );
           })}
