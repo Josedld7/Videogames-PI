@@ -24,7 +24,7 @@ export const getGames = () => {
   return async (dispatch) => {
     try {
       dispatch(loadingGames());
-      const res = await axios.get("http://localhost:3001/games");
+      const res = await axios.get("/games");
       const mapInfo = mapeoGames(res.data);
       return dispatch({
         type: "GET_GAMES",
@@ -39,7 +39,7 @@ export const getGames = () => {
 export const getGeneros = () => {
   return async (dispatch) => {
     try {
-      const res = await axios.get("http://localhost:3001/generos");
+      const res = await axios.get("/generos");
       return dispatch({
         type: "GET_GENEROS",
         payload: res.data,
@@ -54,7 +54,7 @@ export const getByName = (nombre) => {
   return async (dispatch) => {
     try {
       dispatch(loadingName());
-      const res = await axios.get("http://localhost:3001/?nombre=" + nombre);
+      const res = await axios.get("/?nombre=" + nombre);
       return dispatch({
         type: "GET_BY_NAME",
         payload: res.data,
@@ -69,7 +69,7 @@ export const getDetail = (id) => {
   return async (dispatch) => {
     try {
       dispatch(loadingID());
-      const res = await axios.get("http://localhost:3001/" + id);
+      const res = await axios.get("/" + id);
       return dispatch({
         type: "GET_DETAIL",
         payload: res.data,
@@ -83,7 +83,7 @@ export const getDetail = (id) => {
 export const gameCreation = (payload) => {
   return async () => {
     try {
-      const info = await axios.post("http://localhost:3001/create", payload);
+      const info = await axios.post("/create", payload);
       return info;
     } catch (error) {
       return { message: error.message };

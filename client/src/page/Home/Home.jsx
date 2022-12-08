@@ -30,7 +30,7 @@ const Home = () => {
 
   const recargarPage = () => {
     setCurrentpage(1);
-    // dispatch(getGames());
+    dispatch(getGames());
   };
 
   return (
