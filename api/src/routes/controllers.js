@@ -1,10 +1,12 @@
 const axios = require("axios").default;
 const { Videogame, Generos } = require("../db.js");
+require('dotenv').config()
+const { API_KEY} = process.env
 
 // primera peticion api
 const peticion1 = async()=>{
     try {
-        const url1 = 'https://api.rawg.io/api/games?key=72aad4d789b7433391be36826df80db1&page=1&page_size=40'
+        const url1 = `https://api.rawg.io/api/games?key=${API_KEY}&page=1&page_size=40`
         const page1 = await axios(url1)
         return page1.data.results
     } catch (error) {
@@ -14,7 +16,7 @@ const peticion1 = async()=>{
 // segunda peticion api
 const peticion2 = async()=>{
     try {
-        const url2 = 'https://api.rawg.io/api/games?key=72aad4d789b7433391be36826df80db1&page=2&page_size=40'
+        const url2 = `https://api.rawg.io/api/games?key=${API_KEY}&page=2&page_size=40`
         const page2 = await axios(url2)
         return page2.data.results
     } catch (error) {
@@ -24,7 +26,7 @@ const peticion2 = async()=>{
 // tercera peticion api
 const peticion3 = async()=>{
     try {
-        const url3 = 'https://api.rawg.io/api/games?key=72aad4d789b7433391be36826df80db1&page=3&page_size=40'
+        const url3 = `https://api.rawg.io/api/games?key=${API_KEY}&page=3&page_size=40`
         const page3 = await axios(url3)
         return page3.data.results
     } catch (error) {

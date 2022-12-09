@@ -2,6 +2,8 @@ const { Router } = require("express");
 const axios = require("axios").default;
 const { dataFinal} = require("./controllers");
 const { Videogame, Generos } = require("../db.js");
+require('dotenv').config()
+const { API_KEY} = process.env
 
 const router = Router();
 
@@ -52,7 +54,7 @@ router.post("/create", async (req, res) => {
 // 3. obtiene todos los generos y los guarda en bd
 router.get("/generos", async (req, res) => {
     try {
-        const urlGeneros = " https://api.rawg.io/api/genres?key=72aad4d789b7433391be36826df80db1";
+        const urlGeneros = `https://api.rawg.io/api/genres?key=${API_KEY}`;
       const findGeneros = await axios(urlGeneros);
       const select = findGeneros.data.results.map((item) => item.name);
       select.forEach((element) => {
@@ -75,7 +77,7 @@ router.get("/:id", async (req, res) => {
     const {id} = req.params
     try {
       if(id.length < 7){
-        const urlId = `https://api.rawg.io/api/games/${id}?key=72aad4d789b7433391be36826df80db1`
+        const urlId = `https://api.rawg.io/api/games/${id}?key=${API_KEY}`
         const dataApiId = await axios(urlId)
         return res.status(200).json(dataApiId.data)
       }else{
