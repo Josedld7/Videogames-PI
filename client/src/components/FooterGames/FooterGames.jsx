@@ -9,7 +9,7 @@ const FooterGames = () => {
         <div className={style.responsive}>
           <Link to="/create" className={style.link}>
             <div>
-              {/* <i class="fa-solid fa-table-list"></i> */}
+              <i className="fa-solid fa-table-list"></i>
             </div>
             <div>
               <p>Crear juego</p>
@@ -25,7 +25,7 @@ const FooterGames = () => {
             className={style.link}
           >
             <div>
-              {/* <i class="fa-brands fa-xbox"></i> */}
+              <i className="fa-brands fa-xbox"></i>
             </div>
 
             <div>
@@ -42,7 +42,7 @@ const FooterGames = () => {
             className={style.link}
           >
             <div>
-              {/* <i class="fa-brands fa-playstation"></i> */}
+              <i className="fa-brands fa-playstation"></i>
             </div>
 
             <div>
@@ -59,7 +59,7 @@ const FooterGames = () => {
             className={style.link}
           >
             <div>
-              {/* <i class="fa-solid fa-gamepad"></i> */}
+              <i className="fa-solid fa-gamepad"></i>
             </div>
             <div>
               <p>Nintendo</p>
@@ -70,7 +70,7 @@ const FooterGames = () => {
 
       <div className={style.container_copy}>
         <div className={style.copy}>
-          {/* <i class="fa-regular fa-copyright"></i> */}
+          <i className="fa-regular fa-copyright"></i>
         </div>
         <div className={style.copy_description}>
           <p>Todos los derechos reservados. </p>

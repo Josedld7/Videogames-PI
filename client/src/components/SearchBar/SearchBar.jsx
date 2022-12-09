@@ -25,7 +25,7 @@ const Search = () => {
   return (
     <div >
         <input className={style.input} onChange={(e)=>handleChange(e)}  value={input} type= {"text" } name = "buscar" placeholder="Type here..." autoComplete="off"/>
-        <button className={style.btn} onClick={(e) =>handleSubmit(e)} type = {"submit"}>  </button>
+        <button className={style.btn} onClick={(e) =>handleSubmit(e)} type = {"submit"}>  <i className="fa-solid fa-magnifying-glass" ></i></button>
     </div>
   )
 }
