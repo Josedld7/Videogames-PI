@@ -6,8 +6,8 @@ import Home from "./page/Home/Home.jsx";
 import Landing from "./page/Landing/Landing.jsx";
 import axios from 'axios'
 // axios.defaults.baseURL = 'https://videogames-pi-production-e725.up.railway.app/'
-// axios.defaults.baseURL = 'http://localhost:4000'
-axios.defaults.baseURL = 'http://https://videogames-fg486g924-josedld7.vercel.app/'
+axios.defaults.baseURL = 'http://localhost:4000'
+// axios.defaults.baseURL = 'http://https://videogames-fg486g924-josedld7.vercel.app/'
 
 function App() {
   return (
@@ -16,14 +16,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/home" component={Home} />
-
-
           <Route path="/create" component={Form} />
-
           <Route path="/buscar/:id" component={Detail} />
-
           <Route path="*" component={PageNofound} />
-
         </Switch>
       </BrowserRouter>
     </div>
